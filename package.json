@@ -1,0 +1,30 @@
+{
+  "name": "hyper-pocillo-controls",
+  "version": "1.0.0-alpha",
+  "description": "Pretty window controls from the Pocillo theme for hyper",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moso/hyper-pocillo-controls.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moso/hyper-pocillo-controls/issues"
+  },
+  "keywords": [
+    "hyper",
+    "hyperterm",
+    "hyper-plugin",
+    "hyperterm-plugin",
+    "plugin",
+    "pocillo",
+    "ubuntu budgie",
+    "window controls"
+  ],
+  "author": {
+    "name": "Morten Sørensen",
+    "email": "morten@moso.io",
+    "url": "https://moso.io"
+  },
+  "homepage": "https://moso.io",
+  "license": "MIT"
+}
