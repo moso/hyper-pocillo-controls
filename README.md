@@ -47,4 +47,5 @@ If the plugin doesn't look great on `xyz`-theme, then please do create an issue 
 
 ### License
 
-MIT
+- The code is released under the MIT license
+- The inline SVGs are licensed under CC BY-SA 4.0
