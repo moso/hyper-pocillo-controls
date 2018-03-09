@@ -1,6 +1,6 @@
 {
   "name": "hyper-pocillo-controls",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-beta",
   "description": "Pretty window controls from the Pocillo theme for hyper",
   "main": "index.js",
   "repository": {
