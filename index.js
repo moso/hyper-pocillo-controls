@@ -11,13 +11,26 @@ if (isWin == true) {
 
 exports.decorateConfig = (config) => {
     const controlLeft = config.showWindowControls;
+    
+    const pocilloConfig = {
+        height: '35px',
+        headerBg: '#383c4a',
+        borderColor: '#565a67',
+        marginWidth: '89px',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+        svgFill: '#afb1b7',
+        iconSize: '24px',
+        hoverBg: '#565965',
+        closeBg: '#a34f6d',
+        closeHover: '#b16983'
+    }
 
     if(controlLeft == 'left') {
         return Object.assign({}, config, {
             css: `
                 ${config.css || ''}
                 .hyper_main {
-                    border-top: 1px solid #565a67 !important;
+                    border-top: 1px solid ${pocilloConfig.borderColor} !important;
                 }
                 .header_header {
                     display: flex;
@@ -27,29 +40,28 @@ exports.decorateConfig = (config) => {
                     right: 1px !important;
                 }
                 .header_windowHeader {
-                    width: calc(100% - 89px);
-                    height: 35px;
-                    margin-left: 89px;
-                    background-color: #383c4a;
+                    width: calc(100% - ${pocilloConfig.marginWidth});
+                    height: ${pocilloConfig.height};
+                    margin-left: ${pocilloConfig.marginWidth};
+                    background-color: ${pocilloConfig.headerBg};
                     border: 0 !important;
-                    border-top: 1px solid #565a67;
                 }
                 .header_windowHeader .header_hamburgerMenuLeft,
                 .header_windowHeader .header_hamburgerMenuRight {
                     width: 40px;
-                    height: 35px;
+                    height: ${pocilloConfig.height};
                     padding: 0 15px;
                 }
                 .tabs_nav {
                     width: 100%;
-                    top: 35px;
+                    top: ${pocilloConfig.height};
                 }
                 .header_windowControls {
                     display: none;
                 }
                 .header_appTitle {
-                    margin-left: -89px;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    margin-left: -${pocilloConfig.marginWidth};
+                    font-family: ${pocilloConfig.fontFamily}
                     font-size: 14px;
                     font-weight: 700;
                     color: #fff;
@@ -58,18 +70,18 @@ exports.decorateConfig = (config) => {
                     position: absolute;
                     right: auto !important;
                     left: 0 !important;
-                    width: 89px;
-                    height: 35px;
+                    width: ${pocilloConfig.marginWidth};
+                    height: ${pocilloConfig.height};
                     padding-right: 0 !important;
                     padding-left: 5px !important;
-                    background-color: #383c4a;
+                    background-color: ${pocilloConfig.headerBg};
                 }
                 .pocillo_actions {
                     display: flex;
                     flex-direction: row-reverse !important;
                     align-items: center;
                     justify-content: space-between;
-                    height: 35px;
+                    height: ${pocilloConfig.height};
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
@@ -78,31 +90,31 @@ exports.decorateConfig = (config) => {
                     display: flex;
                     align-items: center;
                     justify-content: center;                
-                    width: 24px;
-                    height: 24px;
+                    width: ${pocilloConfig.iconSize};
+                    height: ${pocilloConfig.iconSize};
                     border-radius: 50%;
                 }
                 .pocillo_actions > li > svg {
-                    width: 24px;
-                    height: 24px;
+                    width: ${pocilloConfig.iconSize};
+                    height: ${pocilloConfig.iconSize};
                 }
                 .pocillo_actions > li > svg path {
-                    fill: #afb1b7 !important;
+                    fill: ${pocilloConfig.svgFill} !important;
                 }
                 .pocillo_actions > li:hover,
                 .pocillo_actions > li:active {
-                    background-color: #565965;
+                    background-color: ${pocilloConfig.hoverBg};
                 }
                 .pocillo_actions > li:hover > svg path,
                 .pocillo_actions > li:active > svg path {
                     fill: #fff !important;
                 }
                 .pocillo_actions > li.pocillo_close {
-                    background-color: #a34f6d;
+                    background-color: ${pocilloConfig.closeBg};
                 }
                 .pocillo_actions > li.pocillo_close:hover,
                 .pocillo_actions > li.pocillo_close:active {
-                    background-color: #b16983;
+                    background-color: ${pocilloConfig.closeHover};
                 }
                 .pocillo_actions > li.pocillo_close > svg path,
                 .pocillo_actions > li.pocillo_close:hover > svg path,
@@ -117,7 +129,7 @@ exports.decorateConfig = (config) => {
         css: `
             ${config.css || ''}
             .hyper_main {
-                border-top: 1px solid #565a67 !important;
+                border-top: 1px solid ${pocilloConfig.borderColor} !important;
             }
             .header_header {
                 display: flex;
@@ -126,27 +138,27 @@ exports.decorateConfig = (config) => {
                 right: 1px !important;
             }
             .header_windowHeader {
-                width: calc(100% - 89px);
-                height: 35px;
-                background-color: #383c4a;
+                width: calc(100% - ${pocilloConfig.marginWidth});
+                height: ${pocilloConfig.height};
+                background-color: ${pocilloConfig.headerBg};
                 border: 0 !important;
             }
             .header_windowHeader .header_hamburgerMenuLeft,
             .header_windowHeader .header_hamburgerMenuRight {
                 width: 40px;
-                height: 35px;
+                height: ${pocilloConfig.height};
                 padding: 0 15px;
             }
             .tabs_nav {
                 width: 100%;
-                top: 35px;
+                top: ${pocilloConfig.height};
             }
             .header_windowControls {
                 display: none;
             }
             .header_appTitle {
-                margin-left: 89px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                margin-left: ${pocilloConfig.marginWidth};
+                font-family: ${pocilloConfig.fontFamily};
                 font-size: 14px;
                 font-weight: 700;
                 color: #fff;
@@ -154,16 +166,16 @@ exports.decorateConfig = (config) => {
             .pocillo_header {
                 position: absolute;
                 right: 0;
-                width: 89px;
-                height: 35px;
+                width: ${pocilloConfig.marginWidth};
+                height: ${pocilloConfig.height};
                 padding-right: 5px;
-                background-color: #383c4a;
+                background-color: ${pocilloConfig.headerBg};
             }
             .pocillo_actions {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                height: 35px;
+                height: ${pocilloConfig.height};
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
@@ -172,31 +184,31 @@ exports.decorateConfig = (config) => {
                 display: flex;
                 align-items: center;
                 justify-content: center;                
-                width: 24px;
-                height: 24px;
+                width: ${pocilloConfig.iconSize};
+                height: ${pocilloConfig.iconSize};
                 border-radius: 50%;
             }
             .pocillo_actions > li > svg {
-                width: 24px;
-                height: 24px;
+                width: ${pocilloConfig.iconSize};
+                height: ${pocilloConfig.iconSize};
             }
             .pocillo_actions > li > svg path {
-                fill: #afb1b7 !important;
+                fill: ${pocilloConfig.svgFill} !important;
             }
             .pocillo_actions > li:hover,
             .pocillo_actions > li:active {
-                background-color: #565965;
+                background-color: ${pocilloConfig.hoverBg};
             }
             .pocillo_actions > li:hover > svg path,
             .pocillo_actions > li:active > svg path {
                 fill: #fff !important;
             }
             .pocillo_actions > li.pocillo_close {
-                background-color: #a34f6d;
+                background-color: ${pocilloConfig.closeBg};
             }
             .pocillo_actions > li.pocillo_close:hover,
             .pocillo_actions > li.pocillo_close:active {
-                background-color: #b16983;
+                background-color: ${pocilloConfig.closeHover};
             }
             .pocillo_actions > li.pocillo_close > svg path,
             .pocillo_actions > li.pocillo_close:hover > svg path,
