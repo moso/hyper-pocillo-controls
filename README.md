@@ -17,9 +17,11 @@ If the plugin doesn't look great on `xyz`-theme, then please do create an issue 
 
 ### Changelog
 
-**1.0.0-alpha**
+**1.0.0-beta**
+- Added check for `showWindowContols: 'left'` which now has different/correct styling for left-adjusted window controls ([5cb13e8](https://github.com/moso/hyper-pocillo-controls/commit/5cb13e8a8541250a1c04efb797cf7a4847eed28e)).
 
-\-
+**1.0.0-alpha**
+- Initial commit
 
 ### Install
 
@@ -41,7 +43,6 @@ If the plugin doesn't look great on `xyz`-theme, then please do create an issue 
 
 ### To Do
 
-- Config option for `~/.hyper.js` to change the position to right or left.
 - Config option for `~/.hyper.js` to define if one is using the slim theme version.
 - Create a check to see if the window is focused, and add a class if not, so the window controls will be "faded" like on real window controls.
 
