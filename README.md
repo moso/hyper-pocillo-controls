@@ -1,5 +1,5 @@
 # hyper-pocillo-controls
-Pretty Pocillo window controls for [hyper](https://github.com/zeit/hyper).
+Pretty Pocillo-themed window controls for [hyper](https://github.com/zeit/hyper).
 
 A plugin that makes the close, minimize and maximize buttons look like the [Pocillo GTK Theme](https://github.com/UbuntuBudgie/pocillo-gtk-theme) window controls. This plugin has been thoroughly tested in Ubuntu and Windows 10, and works with both `v1.4.8` (latest stable) and the `v2.0.0` canary versions.
 
@@ -53,6 +53,7 @@ You can configure the window controls like you would in your `~/.hyper.js`.
 
 ### To Do
 
+- Config for Pocillo Light.
 - Create a check to see if the window is focused, and add a class if not, so the window controls will be "faded" like on real window controls.
 
 ### License
