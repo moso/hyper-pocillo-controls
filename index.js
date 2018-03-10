@@ -124,6 +124,55 @@ exports.decorateConfig = (config) => {
             `
         })
     }
+
+    if(controlLeft == false) {
+        return Object.assign({}, config, {
+            css: `
+                ${config.css || ''}
+                .hyper_main {
+                    border-top: 1px solid ${pocilloConfig.borderColor} !important;
+                }
+                .header_header {
+                    display: flex;
+                    top: 1px !important;
+                    left: 1px !important;
+                    right: 1px !important;
+                }
+                .header_windowHeader {
+                    width: 100%;
+                    height: ${pocilloConfig.height};
+                    background-color: ${pocilloConfig.headerBg};
+                    border: 0 !important;
+                }
+                .header_windowHeader .header_hamburgerMenuLeft,
+                .header_windowHeader .header_hamburgerMenuRight {
+                    width: 40px;
+                    height: ${pocilloConfig.height};
+                    padding: 0 15px;
+                }
+                .tabs_nav {
+                    width: 100%;
+                    top: ${pocilloConfig.height};
+                }
+                .header_windowControls {
+                    display: none;
+                }
+                .header_appTitle {
+                    font-family: ${pocilloConfig.fontFamily};
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+                .pocillo_header {
+                    position: absolute;
+                    top: -1000%;
+                    display: none;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            `
+        })
+    }
     
     return Object.assign({}, config, {
         css: `
