@@ -15,6 +15,8 @@ This plugin is designed to work perfectly with the `hyperterm-atom-dark`-theme.
 While it also integrates fine with vanilla-themed hyper, I cannot take every theme and plugin into account.
 If the plugin doesn't look great on `xyz`-theme, then please do create an issue and I will look into it. But since I don't own a Mac, I cannot test the plugin on every OS, although it's been tested on Linux and Windows 10 which is what I have available.
 
+**Beta status**: Since Ubuntu Budgie 18.04 LTS hasn't been released yet (as of March 2018), this plugin remains in beta until release, as there might be pending changes.
+
 ### Changelog
 
 **1.0.0-beta**
