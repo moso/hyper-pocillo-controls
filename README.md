@@ -20,7 +20,7 @@ If the plugin doesn't look great on `xyz`-theme, then please do create an issue 
 ### Changelog
 
 **1.0.0-beta**
-- Added check for `showWindowContols: 'left'` ([`5cb13e8`](https://github.com/moso/hyper-pocillo-controls/commit/5cb13e8a8541250a1c04efb797cf7a4847eed28e)).
+- Added check for `showWindowControls: 'left'` ([`5cb13e8`](https://github.com/moso/hyper-pocillo-controls/commit/5cb13e8a8541250a1c04efb797cf7a4847eed28e)).
 - Added check for `showWindowControls: false` ([`90f38d8`](https://github.com/moso/hyper-pocillo-controls/commit/90f38d8771ef3d205e06c366cf1f2a5ddafcebd9)).
 - Added variables instead of static values ([`424e3a6`](https://github.com/moso/hyper-pocillo-controls/commit/2ff955397f424e3a6d4ecd220e928d0a90a087d7)).
 
