@@ -1,23 +1,24 @@
 # hyper-pocillo-controls
-Pretty Pocillo-themed window controls for [hyper](https://github.com/zeit/hyper).
+Pocillo-themed window controls for [Hyper](https://github.com/zeit/hyper).
 
-A plugin that makes the close, minimize and maximize buttons look like the [Pocillo GTK Theme](https://github.com/UbuntuBudgie/pocillo-gtk-theme) window controls. This plugin has been thoroughly tested in Ubuntu and Windows 10, and works with both `v1.4.8` (latest stable) and the `v2.0.0` canary versions.
+A plugin that makes the close, minimize, and maximize buttons look like the [Pocillo GTK Theme](https://github.com/UbuntuBudgie/pocillo-gtk-theme) window controls, replacing the Windows 10-themed window controls. This plugin has been thoroughly tested in Ubuntu and Windows 10, and works with both `v1.4.8` (old stable) and the `v2.0.0` canary and stable versions.
 
 Based on the [Pocillo GTK Theme](https://github.com/UbuntuBudgie/pocillo-gtk-theme) source, this plugin aims to match the built-in theme shipped with [Ubuntu Budgie](https://ubuntubudgie.org) 18.04 LTS. You're ~welcome~ encouraged to fork this project and modify it if you need to tinker with the colors, or create a PR if I missed something that needs fixing.
 
-This plugin is heavily inspired by my other window controls project for hyper: [hyper-arc-dark-controls](https://github.com/moso/hyper-arc-dark-controls), which is why you'll see a lot of similar code between those two projects.
+This plugin is heavily inspired by my other window controls project for Hyper: [hyper-arc-dark-controls](https://github.com/moso/hyper-arc-dark-controls), which is why you'll see a lot of similar code between those two projects.
 
 ![screenshot](https://dev.moso.io/hyper/hyper-pocillo-controls/screenshot.png)
 
 ### Note
 
-This plugin is designed to work perfectly with the `hyperterm-atom-dark`-theme.
-While it also integrates fine with vanilla-themed hyper, I cannot take every theme and plugin into account.
+Besides theming the window controls, this plugin is also theming the window header of the Hyper window. And while it's designed to work perfectly with the `hyperterm-atom-dark`-theme, it also integrates fine with vanilla-themed Hyper. However, I cannot take every theme and plugin into account.
 If the plugin doesn't look great on `xyz`-theme, then please do create an issue and I will look into it. But since I don't own a Mac, I cannot test the plugin on every OS, although it's been tested on Linux and Windows 10 which is what I have available.
 
-**Beta status**: Since Ubuntu Budgie 18.04 LTS hasn't been released yet (as of March 2018), this plugin remains in beta until release, as there might be pending changes.
-
 ### Changelog
+
+**1.0.0**
+- Stable release
+- Documentation changes
 
 **1.0.0-beta**
 - Added check for `showWindowControls: 'left'` ([`5cb13e8`](https://github.com/moso/hyper-pocillo-controls/commit/5cb13e8a8541250a1c04efb797cf7a4847eed28e)).
@@ -29,34 +30,45 @@ If the plugin doesn't look great on `xyz`-theme, then please do create an issue 
 
 ### Install
 
+**Hyper store**:
+
+```
+hyper i hyper-pocillo-controls
+```
+
 **Manually**:
 
-1. Open hyper's preferences with `Ctrl+,` (or manually at `~/.hyper.js`) with your editor.
-2. Update your list of plugins to include hyper-arc-dark-controls, like so:
+1. Open Hyper's preferences with `Ctrl+,` (or manually at `~/.hyper.js`) with your editor.
+2. Update your list of plugins to include `hyper-pocillo-controls`, like so:
 
         plugins: [
             'hyper-pocillo-controls'
         ],
 
-3. Reload (`Ctrl+Shift+R`) or restart hyper and voila!
+3. Reload (`Ctrl+Shift+R`) or restart Hyper and voila!
 
-**hpm**:
+**hpm (1.4.8)**:
 
 1. Install using `hpm i hyper-pocillo-controls`
-2. Reload (`Ctrl+Shift+R`) or restart hyper and voila!
+2. Reload (`Ctrl+Shift+R`) or restart Hyper and voila!
 
 ### Configuration
 
 You can configure the window controls like you would in your `~/.hyper.js`.
 
 - `showWindowControls: true` - default, will display the window controls on the right.
-- `showWindowControls: 'left'` will display the window controls to the left, like on a Mac.
+- `showWindowControls: 'left'` - will display the window controls to the left, like on a Mac.
 - `showWindowControls: false` - will disable the window controls and only theme the header.
 
 ### To Do
 
 - Config for Pocillo Light.
 - Create a check to see if the window is focused, and add a class if not, so the window controls will be "faded" like on real window controls.
+
+
+### Related
+- [hyper-arc-dark-controls](https://github.com/moso/hyper-arc-dark-controls)
+- [hyper-dark-scrollbar](https://github.com/moso/hyper-dark-scrollbar)
 
 ### License
 
